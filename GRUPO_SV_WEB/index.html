@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRUPO SV | Ingeniería y Construcción</title>
+    <meta name="description" content="Grupo SV - Empresa líder en Ingeniería, Construcción y Topografía en Yurimaguas. Ejecución de obras, expedientes técnicos y alquiler de equipos topográficos.">
+<meta name="keywords" content="Grupo SV, Constructora Yurimaguas, Ingenieros Yurimaguas, Topografía Loreto, Obras Civiles, Expedientes Técnicos, Victor Sangay">
+<meta name="author" content="Grupo SV">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="GRUPO SV | Ingeniería y Construcción">
+<meta property="og:description" content="Soluciones integrales en obras civiles, topografía y gerencia de proyectos en Yurimaguas.">
+<meta property="og:image" content="https://tudominio.com/logo-circulo.jpg"> <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'], // Usamos tu fuente Montserrat
+                    },
+                    colors: {
+                        brand: {
+                            red: '#E71D25',      // TU ROJO EXACTO
+                            redDark: '#c41219',  // Rojo más oscuro para hover
+                            dark: '#2b2b2b',     // Tu gris oscuro
+                            black: '#1a1a1a',
+                            light: '#F4F4F4'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Efecto Cristal para el Menú */
+        .glass-nav {
+            background: rgba(43, 43, 43, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Animación de aparición suave */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased overflow-x-hidden">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12 text-white">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="relative w-12 h-12 rounded-full border-2 border-brand-dark overflow-hidden shadow-lg group-hover:scale-105 transition-transform">
+                    <img src="logo-circulo.jpg" alt="SV" class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="font-display font-black text-2xl tracking-tight">GRUPO <span class="text-brand-red">SV</span></span>
+                    <span class="text-[10px] text-gray-300 font-sans tracking-widest uppercase">Consultora & Constructora</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-10 font-sans font-semibold text-sm tracking-wide">
+                <a href="index.html" class="text-brand-red transition-colors">Inicio</a>
+                <a href="servicios.html" class="hover:text-brand-red transition-colors">Servicios</a>
+                <a href="contacto.html" class="px-6 py-2.5 bg-white text-brand-dark rounded-full font-bold hover:bg-brand-red hover:text-white transition-all shadow-lg hover:shadow-red-500/20">
+                    Contáctanos
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white hover:text-brand-red transition">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8 text-white md:hidden">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-4xl text-gray-400 hover:text-white">
+            &times;
+        </button>
+        <a href="index.html" class="text-3xl font-display font-bold text-brand-red mobile-link">Inicio</a>
+        <a href="servicios.html" class="text-3xl font-display font-bold hover:text-brand-red transition mobile-link">Servicios</a>
+        <a href="contacto.html" class="text-3xl font-display font-bold hover:text-brand-red transition mobile-link">Contacto</a>
+    </div>
+
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" 
+                 class="w-full h-full object-cover brightness-[0.4]"
+                 alt="Construcción Grupo SV">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-brand-black/40"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center lg:text-left lg:px-16 pt-20">
+            <div class="max-w-4xl reveal active">
+                
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-brand-red text-xs font-bold tracking-widest uppercase">
+                    <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+                    Ingeniería y Gerencia de Proyectos
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-tight mb-6">
+                    CONSTRUIMOS <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-400">TU VISIÓN</span>
+                </h1>
+                
+                <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
+                    Empresa líder en Yurimaguas especializada en obras civiles, expedientes técnicos y consultoría integral. Calidad y seguridad garantizada.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://wa.me/51943142077" target="_blank" class="px-8 py-4 bg-brand-red text-white font-bold rounded-lg hover:bg-brand-redDark transition-all uppercase tracking-wider shadow-lg shadow-red-900/30 transform hover:-translate-y-1">
+                        <i class="fa-brands fa-whatsapp mr-2"></i> Cotizar Ahora
+                    </a>
+                    <a href="servicios.html" class="px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-lg hover:bg-white hover:text-brand-black transition-all uppercase tracking-wider backdrop-blur-sm">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 animate-bounce hidden md:block">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white relative">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-32 relative z-20">
+                
+                <div class="bg-brand-dark p-8 rounded-xl shadow-2xl border-b-4 border-brand-red hover:-translate-y-2 transition duration-300 reveal">
+                    <i class="fa-solid fa-helmet-safety text-4xl text-brand-red mb-4"></i>
+                    <h3 class="text-white font-display font-bold text-xl mb-2">Ejecución de Obras</h3>
+                    <p class="text-gray-400 text-sm mb-4">Construcción civil con los más altos estándares de seguridad y calidad.</p>
+                    <a href="servicios.html" class="text-white text-xs font-bold uppercase border-b border-brand-red pb-1">Saber más</a>
+                </div>
+
+                <div class="bg-brand-dark p-8 rounded-xl shadow-2xl border-b-4 border-brand-red hover:-translate-y-2 transition duration-300 reveal delay-100">
+                    <i class="fa-solid fa-file-signature text-4xl text-brand-red mb-4"></i>
+                    <h3 class="text-white font-display font-bold text-xl mb-2">Expedientes Técnicos</h3>
+                    <p class="text-gray-400 text-sm mb-4">Elaboración y consultoría de expedientes para licitaciones y obras.</p>
+                    <a href="servicios.html" class="text-white text-xs font-bold uppercase border-b border-brand-red pb-1">Saber más</a>
+                </div>
+
+                <div class="bg-brand-dark p-8 rounded-xl shadow-2xl border-b-4 border-brand-red hover:-translate-y-2 transition duration-300 reveal delay-200">
+                    <i class="fa-solid fa-users-gear text-4xl text-brand-red mb-4"></i>
+                    <h3 class="text-white font-display font-bold text-xl mb-2">Gerencia de Proyectos</h3>
+                    <p class="text-gray-400 text-sm mb-4">Supervisión y gestión integral para garantizar el éxito de tu inversión.</p>
+                    <a href="servicios.html" class="text-white text-xs font-bold uppercase border-b border-brand-red pb-1">Saber más</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white py-8 border-t border-gray-800 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display font-bold text-2xl tracking-wider mb-2">GRUPO SV</h2>
+            <p class="text-gray-500 text-xs">© 2024 Grupo SV. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto Navbar al hacer scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav', 'py-4');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('glass-nav', 'py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Menú Móvil
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        mobileBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+
+        // Animación de aparición (Scroll Reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Ejecutar al inicio
+    </script>
+</body>
+</html>
