@@ -3,72 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRUPO SV | Servicios</title>
-    <meta name="description" content="Grupo SV - Empresa líder en Ingeniería, Construcción y Topografía en Yurimaguas. Ejecución de obras, expedientes técnicos y alquiler de equipos topográficos.">
-<meta name="keywords" content="Grupo SV, Constructora Yurimaguas, Ingenieros Yurimaguas, Topografía Loreto, Obras Civiles, Expedientes Técnicos, Victor Sangay">
-<meta name="author" content="Grupo SV">
-<meta name="robots" content="index, follow">
-
-<meta property="og:title" content="GRUPO SV | Ingeniería y Construcción">
-<meta property="og:description" content="Soluciones integrales en obras civiles, topografía y gerencia de proyectos en Yurimaguas.">
-<meta property="og:image" content="https://tudominio.com/logo-circulo.jpg"> <meta property="og:type" content="website">
+    <title>GRUPO SV | Servicios Especializados</title>
+    <meta name="description" content="Servicios de ingeniería, construcción civil, expedientes técnicos y topografía en Yurimaguas - Loreto.">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="logo-circulo.jpg" type="image/jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Construcción e Ingeniería",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "Grupo SV",
+        "telephone": "+51943142077",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Yurimaguas",
+          "addressRegion": "Loreto",
+          "addressCountry": "PE"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Construcción",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ejecución de Obras Civiles"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Expedientes Técnicos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Topografía Integral"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['Manrope', 'sans-serif'], display: ['Montserrat', 'sans-serif'] },
-                    colors: {
-                        brand: { red: '#E71D25', redDark: '#c41219', dark: '#1a1a1a', gray: '#666666', light: '#F8F9FA' }
-                    },
-                    boxShadow: {
-                        'premium': '0 10px 40px -10px rgba(0,0,0,0.08)',
-                        'premium-hover': '0 20px 60px -15px rgba(231, 29, 37, 0.15)', // Sombra roja muy suave al flotar
-                    }
+                    colors: { brand: { red: '#E71D25', redDark: '#c41219', dark: '#2b2b2b', black: '#1a1a1a', light: '#F4F4F4' } },
+                    boxShadow: { 'premium': '0 10px 40px -10px rgba(0,0,0,0.08)', 'premium-hover': '0 20px 60px -15px rgba(231, 29, 37, 0.15)' }
                 }
             }
         }
     </script>
-
     <style>
-        .glass-nav { background: rgba(26, 26, 26, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .nav-transparent { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-red selection:text-white">
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12 text-white">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 px-6 lg:px-12 text-white nav-transparent">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 group">
-                <div class="relative w-11 h-11 rounded-full border-2 border-white/10 overflow-hidden shadow-lg group-hover:border-brand-red transition-colors">
-                    <img src="logo-circulo.jpg" alt="SV" class="object-cover w-full h-full scale-110">
+                <div class="relative w-12 h-12 rounded-full border-2 border-white/20 group-hover:border-brand-red/50 overflow-hidden shadow-lg transition-all duration-300 transform group-hover:scale-105">
+                    <img src="logo-circulo.jpg" alt="SV" class="object-cover w-full h-full">
                 </div>
                 <div class="flex flex-col leading-none">
-                    <span class="font-display font-black text-xl tracking-tight">GRUPO <span class="text-brand-red">SV</span></span>
+                    <span class="font-display font-black text-2xl tracking-tight">GRUPO <span class="text-brand-red">SV</span></span>
+                    <span class="text-[10px] font-sans tracking-widest uppercase opacity-80">Ingeniería & Construcción</span>
                 </div>
             </a>
-            
-            <div class="hidden md:flex items-center gap-10 font-sans font-semibold text-sm tracking-wide">
-                <a href="index.html" class="opacity-80 hover:opacity-100 hover:text-brand-red transition-all">Inicio</a>
-                <a href="servicios.html" class="text-brand-red font-bold">Servicios</a>
-                <a href="contacto.html" class="px-7 py-3 bg-white text-brand-dark rounded-full font-bold hover:bg-brand-red hover:text-white transition-all shadow-lg hover:shadow-red-500/30 transform hover:-translate-y-0.5">Contáctanos</a>
+
+            <div class="hidden md:flex items-center gap-12 font-sans font-bold text-xs tracking-widest uppercase">
+                <a href="index.html" class="hover:text-brand-red transition-colors">Inicio</a>
+                <a href="proyectos.html" class="hover:text-brand-red transition-colors">Proyectos</a>
+                <a href="servicios.html" class="text-brand-red transition-colors">Servicios</a>
+                <a href="contacto.html" id="nav-btn" class="px-8 py-3 bg-white text-brand-dark rounded-full hover:bg-brand-red hover:text-white transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">Contáctanos</a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white hover:text-brand-red transition"><i class="fa-solid fa-bars"></i></button>
+            <button id="mobile-menu-btn" class="md:hidden w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-brand-red hover:border-brand-red transition-all duration-300 shadow-sm text-white">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
+            </button>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-[#1a1a1a] z-50 transform translate-x-full transition-transform duration-500 flex flex-col items-center justify-center gap-8 text-white md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 bg-[#1a1a1a]/98 backdrop-blur-xl z-50 transform translate-x-full transition-transform duration-500 flex flex-col items-center justify-center gap-0 text-white md:hidden">
         <button id="close-menu-btn" class="absolute top-8 right-8 text-4xl text-gray-500 hover:text-white transition-colors">×</button>
-        <a href="index.html" class="text-4xl font-display font-bold hover:text-brand-red mobile-link transition-colors">Inicio</a>
-        <a href="servicios.html" class="text-4xl font-display font-bold text-brand-red mobile-link">Servicios</a>
-        <a href="contacto.html" class="text-4xl font-display font-bold hover:text-brand-red mobile-link transition-colors">Contacto</a>
+        <div class="w-full max-w-sm px-8 flex flex-col text-center">
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-8">Navegación</span>
+            <a href="index.html" class="py-5 text-2xl font-bold border-b border-gray-800 hover:text-brand-red transition-colors">Inicio</a>
+            <a href="proyectos.html" class="py-5 text-2xl font-medium text-gray-400 border-b border-gray-800 hover:text-brand-red transition-colors">Proyectos</a>
+            <a href="servicios.html" class="py-5 text-2xl font-medium text-brand-red border-b border-gray-800 transition-colors">Servicios</a>
+            <a href="contacto.html" class="py-5 text-2xl font-medium text-gray-400 hover:text-brand-red transition-colors">Contacto</a>
+            
+            <a href="https://wa.me/51943142077" target="_blank" class="mt-10 py-4 bg-brand-red text-white font-bold rounded-xl shadow-lg hover:bg-red-700 transition-all uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Cotizar Ahora
+            </a>
+        </div>
     </div>
 
     <header class="relative h-[60vh] flex items-center justify-center overflow-hidden">
@@ -79,7 +125,6 @@
         <div class="relative z-10 container mx-auto px-6 text-center pt-20 reveal active">
             <span class="text-brand-red font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Excelencia Profesional</span>
             <h1 class="text-5xl md:text-7xl font-display font-black text-white uppercase tracking-tight mb-6 leading-tight">Nuestros <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Servicios</span></h1>
-            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">Soluciones integrales de ingeniería, topografía y construcción con los más altos estándares de calidad.</p>
         </div>
     </header>
 
@@ -87,106 +132,70 @@
         <div class="container mx-auto max-w-7xl">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="bg-white p-10 rounded-3xl shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal group cursor-default border border-gray-100">
+                <div class="bg-white p-10 rounded-[2rem] shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal group cursor-default border border-gray-100">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 shadow-sm group-hover:scale-110 group-hover:rotate-3">
                         <i class="fa-solid fa-helmet-safety"></i>
                     </div>
                     <h3 class="text-2xl font-display font-bold text-gray-900 mb-6 group-hover:text-brand-red transition-colors">Ingeniería y Obras</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Ejecución de Obras Civiles
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Supervisión de Obras
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Valorizaciones y Presupuestos
-                        </li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Ejecución de Obras Civiles</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Supervisión de Obras</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Valorizaciones y Presupuestos</li>
                     </ul>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal delay-100 group cursor-default border border-gray-100">
+                <div class="bg-white p-10 rounded-[2rem] shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal delay-100 group cursor-default border border-gray-100">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 shadow-sm group-hover:scale-110 group-hover:rotate-3">
                         <i class="fa-solid fa-file-contract"></i>
                     </div>
                     <h3 class="text-2xl font-display font-bold text-gray-900 mb-6 group-hover:text-brand-red transition-colors">Trámites Técnicos</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Expedientes Técnicos
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Habilitaciones Urbanas
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Saneamiento Físico Legal
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Licencias de Edificación
-                        </li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Expedientes Técnicos</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Habilitaciones Urbanas</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Saneamiento Físico Legal</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Licencias de Edificación</li>
                     </ul>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal delay-200 group cursor-default border border-gray-100">
+                <div class="bg-white p-10 rounded-[2rem] shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal delay-200 group cursor-default border border-gray-100">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 shadow-sm group-hover:scale-110 group-hover:rotate-3">
                         <i class="fa-solid fa-pen-ruler"></i>
                     </div>
                     <h3 class="text-2xl font-display font-bold text-gray-900 mb-6 group-hover:text-brand-red transition-colors">Diseño y Planos</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Diseños Arquitectónicos
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Planos de Especialidades (2D)
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Modelado 3D y Renderizado
-                        </li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Diseños Arquitectónicos</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Planos de Especialidades (2D)</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Modelado 3D y Renderizado</li>
                     </ul>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal group cursor-default border border-gray-100 md:col-span-1 lg:col-span-1">
+                <div class="bg-white p-10 rounded-[2rem] shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal group cursor-default border border-gray-100 md:col-span-1 lg:col-span-1">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 shadow-sm group-hover:scale-110 group-hover:rotate-3">
                         <i class="fa-solid fa-mountain-sun"></i>
                     </div>
                     <h3 class="text-2xl font-display font-bold text-gray-900 mb-6 group-hover:text-brand-red transition-colors">Topografía Integral</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Servicio de Topografía y Alquiler de Equipos
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Levantamientos Topográficos y Catastrales
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Lotizaciones, Urbanizaciones y Subdivisión
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Replanteos y Nivelaciones en Obras
-                        </li>
-                         <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Diseño, Dibujo y Planos para Trámites
-                        </li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Servicio de Topografía y Alquiler</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Levantamientos Topográficos</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Lotizaciones y Subdivisión</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Replanteos y Nivelaciones</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Dibujo de Planos</li>
                     </ul>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal delay-100 group cursor-default border border-gray-100 md:col-span-1 lg:col-span-1">
+                <div class="bg-white p-10 rounded-[2rem] shadow-premium hover:shadow-premium-hover hover:-translate-y-2 transition-all duration-300 reveal delay-100 group cursor-default border border-gray-100 md:col-span-1 lg:col-span-1">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 shadow-sm group-hover:scale-110 group-hover:rotate-3">
                         <i class="fa-solid fa-print"></i>
                     </div>
                     <h3 class="text-2xl font-display font-bold text-gray-900 mb-6 group-hover:text-brand-red transition-colors">Multiservicios</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Ploteos de Planos
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Impresión y Copia de Planos
-                        </li>
-                        <li class="flex items-start text-brand-gray text-[15px] group-hover:text-gray-900 transition-colors">
-                            <i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Digitalización de Planos (A4 - A0)
-                        </li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Ploteos de Planos</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Impresión y Copia de Planos</li>
+                        <li class="flex items-start text-gray-500 text-[15px] group-hover:text-gray-900 transition-colors"><i class="fa-solid fa-check text-brand-red mt-1 mr-3 text-xs"></i>Digitalización (A4 - A0)</li>
                     </ul>
                 </div>
 
-                <div class="bg-brand-dark p-10 rounded-3xl shadow-premium hover:shadow-xl transition-all duration-300 reveal delay-200 flex flex-col justify-center items-center text-center border border-gray-800">
+                <div class="bg-brand-dark p-10 rounded-[2rem] shadow-premium hover:shadow-xl transition-all duration-300 reveal delay-200 flex flex-col justify-center items-center text-center border border-gray-800">
                    <h3 class="text-2xl font-display font-bold text-white mb-4">¿Tienes un proyecto especial?</h3>
                    <p class="text-gray-400 mb-8 text-sm">Contáctanos para una cotización personalizada a tu medida.</p>
                    <a href="contacto.html" class="px-8 py-3 bg-brand-red text-white font-bold rounded-full hover:bg-white hover:text-brand-red transition-all shadow-lg hover:shadow-red-500/20">Cotizar Ahora</a>
@@ -196,35 +205,57 @@
         </div>
     </section>
 
-    <footer class="bg-[#1a1a1a] text-white py-12 border-t border-gray-800/50 text-center">
+    <footer class="bg-brand-dark text-white py-12 border-t border-gray-800 text-center">
         <div class="container mx-auto px-6">
-            <h2 class="font-display font-black text-2xl tracking-widest mb-3">GRUPO SV</h2>
-            <p class="text-gray-500 text-xs tracking-wide">© 2024 Grupo SV. Todos los derechos reservados.</p>
+            <h2 class="font-display font-black text-3xl tracking-wider mb-4">GRUPO <span class="text-brand-red">SV</span></h2>
+            <div class="flex justify-center gap-8 mb-8 text-gray-400">
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+            </div>
+            <p class="text-gray-500 text-xs tracking-widest uppercase">© 2024 Grupo SV. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <a href="perfil.html" class="fixed bottom-28 right-8 z-50 bg-white text-brand-dark w-16 h-16 rounded-full flex items-center justify-center shadow-premium border-4 border-gray-100 hover:border-brand-red hover:text-brand-red hover:-translate-y-2 hover:scale-110 transition-all duration-300 group" title="Ver Perfil del Ingeniero">
+        <i class="fa-solid fa-user-tie text-2xl"></i>
+    </a>
+
+    <a href="https://wa.me/51943142077?text=Hola%20Grupo%20SV" target="_blank" class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-glow hover:bg-[#1da851] hover:-translate-y-2 hover:scale-110 transition-all duration-300 group border-4 border-white">
+        <i class="fa-brands fa-whatsapp text-4xl"></i>
+    </a>
+
     <script>
-        // Navbar Logic
+        // NAVBAR CAMALEÓNICO
         const navbar = document.getElementById('navbar');
+        const navBtn = document.getElementById('nav-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) { navbar.classList.add('glass-nav', 'py-4'); navbar.classList.remove('py-6'); }
-            else { navbar.classList.remove('glass-nav', 'py-4'); navbar.classList.add('py-6'); }
+            if (window.scrollY > 20) { 
+                navbar.classList.add('glass-nav', 'py-4', 'shadow-sm', 'text-brand-dark'); 
+                navbar.classList.remove('py-6', 'text-white', 'nav-transparent'); 
+                navBtn.classList.remove('bg-white', 'text-brand-dark');
+                navBtn.classList.add('bg-brand-red', 'text-white');
+                mobileMenuBtn.classList.remove('text-white', 'border-white/20');
+                mobileMenuBtn.classList.add('text-brand-dark', 'border-gray-200');
+            } else { 
+                navbar.classList.remove('glass-nav', 'py-4', 'shadow-sm', 'text-brand-dark'); 
+                navbar.classList.add('py-6', 'text-white', 'nav-transparent'); 
+                navBtn.classList.add('bg-white', 'text-brand-dark');
+                navBtn.classList.remove('bg-brand-red', 'text-white');
+                mobileMenuBtn.classList.add('text-white', 'border-white/20');
+                mobileMenuBtn.classList.remove('text-brand-dark', 'border-gray-200');
+            }
         });
-        
-        // Menu Logic
-        const mobileBtn = document.getElementById('mobile-menu-btn'), mobileMenu = document.getElementById('mobile-menu'), closeBtn = document.getElementById('close-menu-btn');
+
+        // MENÚ MÓVIL
+        const mobileBtn = document.getElementById('mobile-menu-btn'), closeBtn = document.getElementById('close-menu-btn'), mobileMenu = document.getElementById('mobile-menu');
         function toggleMenu() { mobileMenu.classList.toggle('translate-x-full'); document.body.classList.toggle('overflow-hidden'); }
         mobileBtn.addEventListener('click', toggleMenu); closeBtn.addEventListener('click', toggleMenu);
 
-        // Scroll Reveal
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
-            }
-        }
+        // REVEAL
+        function reveal() { var reveals = document.querySelectorAll(".reveal"); for (var i = 0; i < reveals.length; i++) { var windowHeight = window.innerHeight; var elementTop = reveals[i].getBoundingClientRect().top; if (elementTop < windowHeight - 100) reveals[i].classList.add("active"); } }
         window.addEventListener("scroll", reveal); reveal();
     </script>
 </body>

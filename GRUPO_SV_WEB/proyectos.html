@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRUPO SV | Portafolio de Proyectos</title>
+    <meta name="description" content="Galería de obras ejecutadas por Grupo SV en Yurimaguas y Loreto: Construcción, Topografía y Expedientes.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logo-circulo.jpg" type="image/jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Portafolio de Grupo SV",
+      "description": "Galería de proyectos de construcción, topografía y consultoría en ingeniería.",
+      "provider": {
+        "@type": "GeneralContractor",
+        "name": "Grupo SV",
+        "telephone": "+51943142077"
+      }
+    }
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Manrope', 'sans-serif'], display: ['Montserrat', 'sans-serif'] },
+                    colors: { brand: { red: '#E71D25', redDark: '#c41219', dark: '#2b2b2b', black: '#1a1a1a', light: '#F4F4F4' } },
+                    boxShadow: { 'premium': '0 20px 40px -15px rgba(0,0,0,0.1)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-transparent { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-white text-brand-dark antialiased selection:bg-brand-red selection:text-white">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 px-6 lg:px-12 text-white nav-transparent">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="relative w-12 h-12 rounded-full border-2 border-white/20 group-hover:border-brand-red/50 overflow-hidden shadow-lg transition-all duration-300 transform group-hover:scale-105">
+                    <img src="logo-circulo.jpg" alt="SV" class="object-cover w-full h-full">
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="font-display font-black text-2xl tracking-tight">GRUPO <span class="text-brand-red">SV</span></span>
+                    <span class="text-[10px] font-sans tracking-widest uppercase opacity-80">Ingeniería & Construcción</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-12 font-sans font-bold text-xs tracking-widest uppercase">
+                <a href="index.html" class="hover:text-brand-red transition-colors">Inicio</a>
+                <a href="proyectos.html" class="text-brand-red transition-colors">Proyectos</a>
+                <a href="servicios.html" class="hover:text-brand-red transition-colors">Servicios</a>
+                <a href="contacto.html" id="nav-btn" class="px-8 py-3 bg-white text-brand-dark rounded-full hover:bg-brand-red hover:text-white transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">Contáctanos</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-brand-red hover:border-brand-red transition-all duration-300 shadow-sm text-white">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-white/98 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 flex flex-col items-center justify-center gap-0 text-brand-dark md:hidden">
+        <button id="close-menu-btn" class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center bg-gray-50 rounded-full text-gray-400 hover:bg-red-50 hover:text-brand-red transition-all border border-gray-100">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        <div class="w-full max-w-sm px-8 flex flex-col text-center">
+            <span class="text-xs font-bold text-gray-300 uppercase tracking-[0.3em] mb-8">Navegación</span>
+            <a href="index.html" class="py-5 text-2xl font-bold border-b border-gray-100 hover:text-brand-red transition-colors">Inicio</a>
+            <a href="proyectos.html" class="py-5 text-2xl font-medium text-brand-red border-b border-gray-100 transition-colors">Proyectos</a>
+            <a href="servicios.html" class="py-5 text-2xl font-medium text-gray-600 border-b border-gray-100 hover:text-brand-red transition-colors">Servicios</a>
+            <a href="contacto.html" class="py-5 text-2xl font-medium text-gray-600 hover:text-brand-red transition-colors">Contacto</a>
+            
+            <a href="https://wa.me/51943142077" target="_blank" class="mt-10 py-4 bg-brand-red text-white font-bold rounded-xl shadow-lg hover:bg-red-700 transition-all uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Cotizar Ahora
+            </a>
+        </div>
+    </div>
+
+    <header class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070" class="w-full h-full object-cover brightness-[0.3]" alt="Proyectos">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+        </div>
+        <div class="relative z-10 container mx-auto px-6 text-center pt-20 reveal active">
+            <span class="text-brand-red font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Nuestra Experiencia</span>
+            <h1 class="text-5xl md:text-7xl font-display font-black text-white uppercase tracking-tight mb-6">Galería de <br>Proyectos</h1>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 -mt-20 relative z-20">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="group bg-white rounded-[2rem] overflow-hidden shadow-premium hover:shadow-2xl transition-all duration-300 reveal border border-gray-100">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590644365607-1c5a38fc4303?q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Obra 1">
+                        <div class="absolute top-4 right-4 bg-brand-red text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Obra Civil</div>
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Construcción Residencial</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Ejecución completa de vivienda multifamiliar con acabados de primera calidad.</p>
+                        <div class="flex items-center text-xs font-bold text-gray-400 gap-4 border-t border-gray-100 pt-4">
+                            <span><i class="fa-solid fa-calendar mr-2 text-brand-red"></i> 2023</span>
+                            <span><i class="fa-solid fa-location-dot mr-2 text-brand-red"></i> Yurimaguas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-[2rem] overflow-hidden shadow-premium hover:shadow-2xl transition-all duration-300 reveal delay-100 border border-gray-100">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-cd1096a7a2e8?q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Obra 2">
+                        <div class="absolute top-4 right-4 bg-brand-dark text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Topografía</div>
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Levantamiento Catastral</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Servicio de topografía integral y georreferenciación para habilitación urbana.</p>
+                        <div class="flex items-center text-xs font-bold text-gray-400 gap-4 border-t border-gray-100 pt-4">
+                            <span><i class="fa-solid fa-calendar mr-2 text-brand-red"></i> 2024</span>
+                            <span><i class="fa-solid fa-location-dot mr-2 text-brand-red"></i> Tarapoto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-[2rem] overflow-hidden shadow-premium hover:shadow-2xl transition-all duration-300 reveal delay-200 border border-gray-100">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Obra 3">
+                        <div class="absolute top-4 right-4 bg-brand-red text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Expediente</div>
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Expediente Técnico</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Elaboración de expediente completo, planos y metrados para licitación.</p>
+                        <div class="flex items-center text-xs font-bold text-gray-400 gap-4 border-t border-gray-100 pt-4">
+                            <span><i class="fa-solid fa-calendar mr-2 text-brand-red"></i> 2023</span>
+                            <span><i class="fa-solid fa-location-dot mr-2 text-brand-red"></i> Loreto</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+             <div class="mt-20 text-center reveal">
+                <p class="text-gray-500 mb-6 font-medium">¿Quieres ver más detalles de nuestro trabajo?</p>
+                <a href="contacto.html" class="inline-block px-10 py-4 bg-brand-dark text-white font-bold rounded-full hover:bg-brand-red transition-all shadow-lg tracking-widest text-xs uppercase">Solicitar Portafolio PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white py-12 border-t border-gray-800 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display font-black text-3xl tracking-wider mb-4">GRUPO <span class="text-brand-red">SV</span></h2>
+            <div class="flex justify-center gap-8 mb-8 text-gray-400">
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+            </div>
+            <p class="text-gray-500 text-xs tracking-widest uppercase">© 2024 Grupo SV. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="perfil.html" class="fixed bottom-28 right-8 z-50 bg-white text-brand-dark w-16 h-16 rounded-full flex items-center justify-center shadow-premium border-4 border-gray-100 hover:border-brand-red hover:text-brand-red hover:-translate-y-2 hover:scale-110 transition-all duration-300 group" title="Ver Perfil del Ingeniero">
+        <i class="fa-solid fa-user-tie text-2xl"></i>
+    </a>
+
+    <a href="https://wa.me/51943142077?text=Hola%20Grupo%20SV" target="_blank" class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-glow hover:bg-[#1da851] hover:-translate-y-2 hover:scale-110 transition-all duration-300 group border-4 border-white">
+        <i class="fa-brands fa-whatsapp text-4xl"></i>
+    </a>
+
+    <script>
+        // NAVBAR CAMALEÓNICO
+        const navbar = document.getElementById('navbar');
+        const navBtn = document.getElementById('nav-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) { 
+                navbar.classList.add('glass-nav', 'py-4', 'shadow-sm', 'text-brand-dark'); 
+                navbar.classList.remove('py-6', 'text-white', 'nav-transparent'); 
+                navBtn.classList.remove('bg-white', 'text-brand-dark');
+                navBtn.classList.add('bg-brand-red', 'text-white');
+                mobileMenuBtn.classList.remove('text-white', 'border-white/20');
+                mobileMenuBtn.classList.add('text-brand-dark', 'border-gray-200');
+            } else { 
+                navbar.classList.remove('glass-nav', 'py-4', 'shadow-sm', 'text-brand-dark'); 
+                navbar.classList.add('py-6', 'text-white', 'nav-transparent'); 
+                navBtn.classList.add('bg-white', 'text-brand-dark');
+                navBtn.classList.remove('bg-brand-red', 'text-white');
+                mobileMenuBtn.classList.add('text-white', 'border-white/20');
+                mobileMenuBtn.classList.remove('text-brand-dark', 'border-gray-200');
+            }
+        });
+
+        // MENÚ MÓVIL
+        const mobileBtn = document.getElementById('mobile-menu-btn'), closeBtn = document.getElementById('close-menu-btn'), mobileMenu = document.getElementById('mobile-menu');
+        function toggleMenu() { mobileMenu.classList.toggle('translate-x-full'); document.body.classList.toggle('overflow-hidden'); }
+        mobileBtn.addEventListener('click', toggleMenu); closeBtn.addEventListener('click', toggleMenu);
+
+        // REVEAL
+        function reveal() { var reveals = document.querySelectorAll(".reveal"); for (var i = 0; i < reveals.length; i++) { var windowHeight = window.innerHeight; var elementTop = reveals[i].getBoundingClientRect().top; if (elementTop < windowHeight - 100) reveals[i].classList.add("active"); } }
+        window.addEventListener("scroll", reveal); reveal();
+    </script>
+</body>
+</html>

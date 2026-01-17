@@ -4,221 +4,355 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRUPO SV | Ingeniería y Construcción</title>
-    <meta name="description" content="Grupo SV - Empresa líder en Ingeniería, Construcción y Topografía en Yurimaguas. Ejecución de obras, expedientes técnicos y alquiler de equipos topográficos.">
-<meta name="keywords" content="Grupo SV, Constructora Yurimaguas, Ingenieros Yurimaguas, Topografía Loreto, Obras Civiles, Expedientes Técnicos, Victor Sangay">
-<meta name="author" content="Grupo SV">
-<meta name="robots" content="index, follow">
-
-<meta property="og:title" content="GRUPO SV | Ingeniería y Construcción">
-<meta property="og:description" content="Soluciones integrales en obras civiles, topografía y gerencia de proyectos en Yurimaguas.">
-<meta property="og:image" content="https://tudominio.com/logo-circulo.jpg"> <meta property="og:type" content="website">
+    <meta name="description" content="Grupo SV - Empresa líder en Ingeniería, Construcción y Topografía en Yurimaguas.">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logo-circulo.jpg" type="image/jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "name": "Grupo SV | Ingeniería y Construcción",
+      "image": "https://gruposv.vercel.app/logo-circulo.jpg",
+      "description": "Empresa líder en Yurimaguas especializada en obras civiles, expedientes técnicos, topografía y gerencia de proyectos.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Victor Sifuentes N° 605",
+        "addressLocality": "Yurimaguas",
+        "addressRegion": "Loreto",
+        "postalCode": "16501",
+        "addressCountry": "PE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -5.9018, 
+        "longitude": -76.1223
+      },
+      "url": "https://gruposv.vercel.app",
+      "telephone": "+51943142077",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Manrope', 'sans-serif'],
-                        display: ['Montserrat', 'sans-serif'], // Usamos tu fuente Montserrat
-                    },
-                    colors: {
-                        brand: {
-                            red: '#E71D25',      // TU ROJO EXACTO
-                            redDark: '#c41219',  // Rojo más oscuro para hover
-                            dark: '#2b2b2b',     // Tu gris oscuro
-                            black: '#1a1a1a',
-                            light: '#F4F4F4'
-                        }
+                    fontFamily: { sans: ['Manrope', 'sans-serif'], display: ['Montserrat', 'sans-serif'] },
+                    colors: { brand: { red: '#E71D25', redDark: '#c41219', dark: '#2b2b2b', black: '#1a1a1a', light: '#F4F4F4' } },
+                    boxShadow: { 
+                        'premium': '0 20px 40px -15px rgba(0,0,0,0.1)',
+                        'glow': '0 0 20px rgba(231, 29, 37, 0.15)'
                     }
                 }
             }
         }
     </script>
-
     <style>
-        /* Efecto Cristal para el Menú */
-        .glass-nav {
-            background: rgba(43, 43, 43, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Animación de aparición suave */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .nav-transparent { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @keyframes loadBar { 0% { width: 0%; } 100% { width: 100%; } }
     </style>
 </head>
-<body class="bg-brand-light text-brand-dark antialiased overflow-x-hidden">
+<body class="bg-white text-brand-dark antialiased overflow-x-hidden selection:bg-brand-red selection:text-white">
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12 text-white">
+    <div id="preloader" class="fixed inset-0 z-[100] bg-white flex flex-col justify-center items-center transition-all duration-1000 ease-out">
+        <div class="relative mb-8">
+            <div class="relative w-24 h-24 rounded-full border-4 border-gray-100 overflow-hidden shadow-2xl animate-pulse">
+                <img src="logo-circulo.jpg" class="object-cover w-full h-full" alt="Cargando Grupo SV">
+            </div>
+            <div class="absolute -inset-4 border border-brand-red/30 rounded-full animate-[spin_3s_linear_infinite]"></div>
+            <div class="absolute -inset-4 border-t-2 border-brand-red rounded-full animate-[spin_2s_linear_infinite]"></div>
+        </div>
+        <div class="text-center">
+            <h2 class="font-display font-black text-2xl tracking-tight text-brand-dark mb-2">GRUPO <span class="text-brand-red">SV</span></h2>
+            <div class="flex items-center gap-2 justify-center">
+                <div class="w-2 h-2 bg-brand-red rounded-full animate-pulse"></div>
+                <span class="text-[10px] font-bold tracking-[0.4em] text-gray-400 uppercase">Iniciando Sistema...</span>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-1.5 bg-gray-100">
+            <div class="h-full bg-brand-red animate-[loadBar_1.5s_ease-in-out_forwards]"></div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 px-6 lg:px-12 text-white nav-transparent">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            
             <a href="index.html" class="flex items-center gap-3 group">
-                <div class="relative w-12 h-12 rounded-full border-2 border-brand-dark overflow-hidden shadow-lg group-hover:scale-105 transition-transform">
+                <div class="relative w-12 h-12 rounded-full border-2 border-white/20 group-hover:border-brand-red/50 overflow-hidden shadow-lg transition-all duration-300 transform group-hover:scale-105">
                     <img src="logo-circulo.jpg" alt="SV" class="object-cover w-full h-full">
                 </div>
                 <div class="flex flex-col leading-none">
                     <span class="font-display font-black text-2xl tracking-tight">GRUPO <span class="text-brand-red">SV</span></span>
-                    <span class="text-[10px] text-gray-300 font-sans tracking-widest uppercase">Consultora & Constructora</span>
+                    <span class="text-[10px] font-sans tracking-widest uppercase opacity-80">Ingeniería & Construcción</span>
                 </div>
             </a>
 
-            <div class="hidden md:flex items-center gap-10 font-sans font-semibold text-sm tracking-wide">
+            <div class="hidden md:flex items-center gap-12 font-sans font-bold text-xs tracking-widest uppercase">
                 <a href="index.html" class="text-brand-red transition-colors">Inicio</a>
+                <a href="proyectos.html" class="hover:text-brand-red transition-colors">Proyectos</a>
                 <a href="servicios.html" class="hover:text-brand-red transition-colors">Servicios</a>
-                <a href="contacto.html" class="px-6 py-2.5 bg-white text-brand-dark rounded-full font-bold hover:bg-brand-red hover:text-white transition-all shadow-lg hover:shadow-red-500/20">
-                    Contáctanos
-                </a>
+                <a href="contacto.html" id="nav-btn" class="px-8 py-3 bg-white text-brand-dark rounded-full hover:bg-brand-red hover:text-white transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">Contáctanos</a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white hover:text-brand-red transition">
-                <i class="fa-solid fa-bars"></i>
+            <button id="mobile-menu-btn" class="md:hidden w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-brand-red hover:border-brand-red transition-all duration-300 shadow-sm text-white">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
             </button>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8 text-white md:hidden">
-        <button id="close-menu-btn" class="absolute top-8 right-8 text-4xl text-gray-400 hover:text-white">
-            &times;
+    <div id="mobile-menu" class="fixed inset-0 bg-white/98 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 flex flex-col items-center justify-center gap-0 text-brand-dark md:hidden">
+        <button id="close-menu-btn" class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center bg-gray-50 rounded-full text-gray-400 hover:bg-red-50 hover:text-brand-red transition-all border border-gray-100">
+            <i class="fa-solid fa-xmark text-xl"></i>
         </button>
-        <a href="index.html" class="text-3xl font-display font-bold text-brand-red mobile-link">Inicio</a>
-        <a href="servicios.html" class="text-3xl font-display font-bold hover:text-brand-red transition mobile-link">Servicios</a>
-        <a href="contacto.html" class="text-3xl font-display font-bold hover:text-brand-red transition mobile-link">Contacto</a>
+        <div class="w-full max-w-sm px-8 flex flex-col text-center">
+            <span class="text-xs font-bold text-gray-300 uppercase tracking-[0.3em] mb-8">Navegación</span>
+            <a href="index.html" class="py-5 text-2xl font-bold border-b border-gray-100 hover:text-brand-red transition-colors">Inicio</a>
+            <a href="proyectos.html" class="py-5 text-2xl font-medium text-gray-600 border-b border-gray-100 hover:text-brand-red transition-colors">Proyectos</a>
+            <a href="servicios.html" class="py-5 text-2xl font-medium text-gray-600 border-b border-gray-100 hover:text-brand-red transition-colors">Servicios</a>
+            <a href="contacto.html" class="py-5 text-2xl font-medium text-gray-600 hover:text-brand-red transition-colors">Contacto</a>
+            <a href="https://wa.me/51943142077" target="_blank" class="mt-10 py-4 bg-brand-red text-white font-bold rounded-xl shadow-lg hover:bg-red-700 transition-all uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Cotizar Ahora
+            </a>
+        </div>
     </div>
 
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" 
-                 class="w-full h-full object-cover brightness-[0.4]"
-                 alt="Construcción Grupo SV">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-brand-black/40"></div>
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070" class="w-full h-full object-cover brightness-[0.35]" alt="Construcción Grupo SV">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
         </div>
-
         <div class="relative z-10 container mx-auto px-6 text-center lg:text-left lg:px-16 pt-20">
-            <div class="max-w-4xl reveal active">
-                
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-brand-red text-xs font-bold tracking-widest uppercase">
-                    <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
-                    Ingeniería y Gerencia de Proyectos
+            <div class="max-w-5xl reveal active">
+                <div class="inline-flex items-center gap-3 px-5 py-2 mb-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold tracking-[0.2em] uppercase">
+                    <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span> Líderes en Infraestructura
                 </div>
-                
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-tight mb-6">
+                <h1 class="text-5xl md:text-8xl font-display font-black text-white leading-[0.95] mb-8 drop-shadow-2xl">
                     CONSTRUIMOS <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-400">TU VISIÓN</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-red-400 to-white">TU VISIÓN</span>
                 </h1>
-                
-                <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
-                    Empresa líder en Yurimaguas especializada en obras civiles, expedientes técnicos y consultoría integral. Calidad y seguridad garantizada.
+                <p class="text-gray-300 text-lg md:text-2xl font-light leading-relaxed mb-12 max-w-2xl mx-auto lg:mx-0 border-l-4 border-brand-red pl-6">
+                    Ingeniería de precisión, gerencia de proyectos y ejecución de obras civiles en la Amazonía Peruana.
                 </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="https://wa.me/51943142077" target="_blank" class="px-8 py-4 bg-brand-red text-white font-bold rounded-lg hover:bg-brand-redDark transition-all uppercase tracking-wider shadow-lg shadow-red-900/30 transform hover:-translate-y-1">
-                        <i class="fa-brands fa-whatsapp mr-2"></i> Cotizar Ahora
-                    </a>
-                    <a href="servicios.html" class="px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-lg hover:bg-white hover:text-brand-black transition-all uppercase tracking-wider backdrop-blur-sm">
-                        Ver Servicios
-                    </a>
+                <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                    <a href="https://wa.me/51943142077" target="_blank" class="px-10 py-5 bg-brand-red text-white font-bold rounded-lg hover:bg-red-700 transition-all uppercase tracking-widest text-sm shadow-glow transform hover:-translate-y-1"><i class="fa-brands fa-whatsapp mr-2"></i> Cotizar Ahora</a>
+                    <a href="proyectos.html" class="px-10 py-5 bg-transparent border border-white/30 text-white font-bold rounded-lg hover:bg-white hover:text-brand-black transition-all uppercase tracking-widest text-sm backdrop-blur-sm">Ver Portafolio</a>
                 </div>
             </div>
         </div>
-
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 animate-bounce hidden md:block">
-            <i class="fa-solid fa-chevron-down text-2xl"></i>
+            <i class="fa-solid fa-arrow-down-long text-2xl"></i>
         </div>
     </header>
 
-    <section class="py-20 bg-white relative">
-        <div class="container mx-auto px-6 lg:px-16">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-32 relative z-20">
-                
-                <div class="bg-brand-dark p-8 rounded-xl shadow-2xl border-b-4 border-brand-red hover:-translate-y-2 transition duration-300 reveal">
-                    <i class="fa-solid fa-helmet-safety text-4xl text-brand-red mb-4"></i>
-                    <h3 class="text-white font-display font-bold text-xl mb-2">Ejecución de Obras</h3>
-                    <p class="text-gray-400 text-sm mb-4">Construcción civil con los más altos estándares de seguridad y calidad.</p>
-                    <a href="servicios.html" class="text-white text-xs font-bold uppercase border-b border-brand-red pb-1">Saber más</a>
+    <section class="py-24 bg-white relative z-20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gray-50 skew-x-12 transform origin-top translate-x-20 -z-10"></div>
+        <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <span class="text-brand-red font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Sobre Grupo SV</span>
+                <h2 class="text-4xl md:text-6xl font-display font-black text-brand-dark mb-8 leading-tight">Ingeniería que <br>Deja Huella.</h2>
+                <p class="text-gray-600 mb-8 leading-relaxed text-lg font-light">En <strong>Grupo SV</strong>, no solo construimos estructuras, forjamos el desarrollo de Loreto. Combinamos tecnología topográfica de vanguardia con una gestión de obra rigurosa liderada por el Ing. Victor Sangay.</p>
+                <div class="grid grid-cols-3 gap-8 mt-10 border-t border-gray-100 pt-10" id="stats-section">
+                    <div><span class="block text-4xl md:text-5xl font-display font-black text-brand-red counter" data-target="10">0</span><span class="text-[10px] text-brand-dark font-bold uppercase tracking-widest mt-2 block">Años de Experiencia</span></div>
+                    <div><span class="block text-4xl md:text-5xl font-display font-black text-brand-red counter" data-target="50">0</span><span class="text-[10px] text-brand-dark font-bold uppercase tracking-widest mt-2 block">Proyectos Ejecutados</span></div>
+                    <div><span class="block text-4xl md:text-5xl font-display font-black text-brand-red counter" data-target="100">0</span><span class="text-[10px] text-brand-dark font-bold uppercase tracking-widest mt-2 block">% Clientes Satisfechos</span></div>
                 </div>
-
-                <div class="bg-brand-dark p-8 rounded-xl shadow-2xl border-b-4 border-brand-red hover:-translate-y-2 transition duration-300 reveal delay-100">
-                    <i class="fa-solid fa-file-signature text-4xl text-brand-red mb-4"></i>
-                    <h3 class="text-white font-display font-bold text-xl mb-2">Expedientes Técnicos</h3>
-                    <p class="text-gray-400 text-sm mb-4">Elaboración y consultoría de expedientes para licitaciones y obras.</p>
-                    <a href="servicios.html" class="text-white text-xs font-bold uppercase border-b border-brand-red pb-1">Saber más</a>
+            </div>
+            <div class="relative reveal delay-200 group">
+                <div class="absolute -inset-4 bg-brand-red/5 rounded-[2rem] -z-10 rotate-3 transition-transform group-hover:rotate-6"></div>
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" class="rounded-[1.5rem] shadow-2xl w-full object-cover h-[500px] filter grayscale hover:grayscale-0 transition-all duration-700" alt="Equipo Grupo SV">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-premium border border-gray-100 flex items-center gap-5 max-w-xs animate-bounce-slow">
+                    <div class="w-14 h-14 bg-brand-dark text-white rounded-full flex items-center justify-center text-2xl shadow-lg"><i class="fa-solid fa-award"></i></div>
+                    <div><p class="font-display font-bold text-brand-dark text-lg">Calidad ISO</p><p class="text-xs text-gray-500 uppercase tracking-wider">Estándares Técnicos</p></div>
                 </div>
-
-                <div class="bg-brand-dark p-8 rounded-xl shadow-2xl border-b-4 border-brand-red hover:-translate-y-2 transition duration-300 reveal delay-200">
-                    <i class="fa-solid fa-users-gear text-4xl text-brand-red mb-4"></i>
-                    <h3 class="text-white font-display font-bold text-xl mb-2">Gerencia de Proyectos</h3>
-                    <p class="text-gray-400 text-sm mb-4">Supervisión y gestión integral para garantizar el éxito de tu inversión.</p>
-                    <a href="servicios.html" class="text-white text-xs font-bold uppercase border-b border-brand-red pb-1">Saber más</a>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <footer class="bg-brand-dark text-white py-8 border-t border-gray-800 text-center">
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="reveal">
+                    <span class="text-brand-red font-bold uppercase tracking-[0.2em] text-xs mb-3 block">Portafolio Reciente</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-black text-brand-dark">PROYECTOS DESTACADOS</h2>
+                </div>
+                <a href="proyectos.html" class="group flex items-center font-bold text-brand-dark hover:text-brand-red transition text-sm tracking-widest uppercase">
+                    Ver todos los proyectos 
+                    <span class="ml-3 w-8 h-8 rounded-full border border-brand-dark/20 flex items-center justify-center group-hover:bg-brand-red group-hover:text-white group-hover:border-transparent transition-all">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative h-[450px] overflow-hidden rounded-[2rem] shadow-lg cursor-pointer reveal">
+                    <img src="https://images.unsplash.com/photo-1590644365607-1c5a38fc4303?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="px-3 py-1 bg-brand-red text-white text-[10px] font-bold uppercase rounded-full mb-3 inline-block">Obra Civil</span>
+                        <h3 class="text-white font-display font-bold text-2xl mb-2">Residencial Central</h3>
+                        <p class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Construcción integral multifamiliar con acabados premium.</p>
+                    </div>
+                </div>
+                <div class="group relative h-[450px] overflow-hidden rounded-[2rem] shadow-lg cursor-pointer reveal delay-100">
+                    <img src="https://images.unsplash.com/photo-1581094794329-cd1096a7a2e8?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="px-3 py-1 bg-white text-brand-dark text-[10px] font-bold uppercase rounded-full mb-3 inline-block">Topografía</span>
+                        <h3 class="text-white font-display font-bold text-2xl mb-2">Levantamiento Urbano</h3>
+                        <p class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Georreferenciación y lotización con estación total.</p>
+                    </div>
+                </div>
+                <div class="group relative h-[450px] overflow-hidden rounded-[2rem] shadow-lg cursor-pointer reveal delay-200">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="px-3 py-1 bg-brand-dark text-white text-[10px] font-bold uppercase rounded-full mb-3 inline-block">Gestión</span>
+                        <h3 class="text-white font-display font-bold text-2xl mb-2">Licitación Pública</h3>
+                        <p class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Expediente técnico aprobado para obra municipal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white relative">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="text-center mb-16 reveal">
+                 <span class="text-brand-red font-bold uppercase tracking-[0.2em] text-xs mb-3 block">Nuestra Expertise</span>
+                 <h2 class="text-4xl md:text-5xl font-display font-black text-brand-dark">Soluciones Integrales</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-300 reveal group">
+                    <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110"><i class="fa-solid fa-helmet-safety"></i></div>
+                    <h3 class="text-brand-dark font-display font-bold text-2xl mb-4">Ejecución de Obras</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Construcción civil, remodelaciones y mantenimiento con los más altos estándares de seguridad y calidad ISO.</p>
+                    <a href="servicios.html" class="inline-flex items-center text-brand-red text-xs font-bold uppercase tracking-widest hover:underline">Saber más <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i></a>
+                </div>
+                <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-300 reveal delay-100 group">
+                    <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110"><i class="fa-solid fa-file-signature"></i></div>
+                    <h3 class="text-brand-dark font-display font-bold text-2xl mb-4">Expedientes Técnicos</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Elaboración y consultoría experta para licitaciones públicas y proyectos privados. Documentación impecable.</p>
+                    <a href="servicios.html" class="inline-flex items-center text-brand-red text-xs font-bold uppercase tracking-widest hover:underline">Saber más <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i></a>
+                </div>
+                <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-300 reveal delay-200 group">
+                    <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110"><i class="fa-solid fa-users-gear"></i></div>
+                    <h3 class="text-brand-dark font-display font-bold text-2xl mb-4">Gerencia de Proyectos</h3>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Supervisión, topografía avanzada y gestión integral para garantizar el éxito y rentabilidad de tu inversión.</p>
+                    <a href="servicios.html" class="inline-flex items-center text-brand-red text-xs font-bold uppercase tracking-widest hover:underline">Saber más <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white py-12 border-t border-gray-800 text-center">
         <div class="container mx-auto px-6">
-            <h2 class="font-display font-bold text-2xl tracking-wider mb-2">GRUPO SV</h2>
-            <p class="text-gray-500 text-xs">© 2024 Grupo SV. Todos los derechos reservados.</p>
+            <h2 class="font-display font-black text-3xl tracking-wider mb-6">GRUPO <span class="text-brand-red">SV</span></h2>
+            <div class="flex justify-center gap-8 mb-8 text-gray-400">
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-white hover:scale-110 transition-all"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+            </div>
+            <p class="text-gray-600 text-xs tracking-widest uppercase">© 2024 Grupo SV. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <a href="perfil.html" class="fixed bottom-28 right-8 z-50 bg-white text-brand-dark w-16 h-16 rounded-full flex items-center justify-center shadow-premium border-4 border-gray-100 hover:border-brand-red hover:text-brand-red hover:-translate-y-2 hover:scale-110 transition-all duration-300 group" title="Ver Perfil del Ingeniero">
+        <i class="fa-solid fa-user-tie text-2xl"></i>
+    </a>
+
+    <a href="https://wa.me/51943142077?text=Hola%20Grupo%20SV" target="_blank" class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-glow hover:bg-[#1da851] hover:-translate-y-2 hover:scale-110 transition-all duration-300 group border-4 border-white">
+        <i class="fa-brands fa-whatsapp text-4xl"></i>
+    </a>
+
     <script>
-        // Efecto Navbar al hacer scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('glass-nav', 'py-4');
-                navbar.classList.remove('py-6');
+        // PRELOADER
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (sessionStorage.getItem('visited')) {
+                preloader.style.display = 'none';
             } else {
-                navbar.classList.remove('glass-nav', 'py-4');
-                navbar.classList.add('py-6');
+                setTimeout(() => {
+                    preloader.classList.add('opacity-0', 'pointer-events-none');
+                    sessionStorage.setItem('visited', 'true');
+                }, 1500);
             }
         });
 
-        // Menú Móvil
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const closeBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        function toggleMenu() {
-            mobileMenu.classList.toggle('translate-x-full');
-            document.body.classList.toggle('overflow-hidden');
-        }
+        // NAVBAR CAMALEÓNICO
+        const navbar = document.getElementById('navbar');
+        const navBtn = document.getElementById('nav-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 
-        mobileBtn.addEventListener('click', toggleMenu);
-        closeBtn.addEventListener('click', toggleMenu);
-
-        // Animación de aparición (Scroll Reveal)
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { 
+                navbar.classList.add('glass-nav', 'py-4', 'shadow-sm', 'text-brand-dark'); 
+                navbar.classList.remove('py-6', 'text-white', 'nav-transparent'); 
+                navBtn.classList.remove('bg-white', 'text-brand-dark');
+                navBtn.classList.add('bg-brand-red', 'text-white');
+                mobileMenuBtn.classList.remove('text-white', 'border-white/20');
+                mobileMenuBtn.classList.add('text-brand-dark', 'border-gray-200');
+            } else { 
+                navbar.classList.remove('glass-nav', 'py-4', 'shadow-sm', 'text-brand-dark'); 
+                navbar.classList.add('py-6', 'text-white', 'nav-transparent'); 
+                navBtn.classList.add('bg-white', 'text-brand-dark');
+                navBtn.classList.remove('bg-brand-red', 'text-white');
+                mobileMenuBtn.classList.add('text-white', 'border-white/20');
+                mobileMenuBtn.classList.remove('text-brand-dark', 'border-gray-200');
             }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Ejecutar al inicio
+        });
+
+        // ANIMACIÓN NÚMEROS
+        const statsSection = document.getElementById('stats-section');
+        const counters = document.querySelectorAll('.counter');
+        let started = false;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > statsSection.offsetTop - 500 && !started) {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        const inc = target / 100;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target + (counter.getAttribute('data-target') == '100' ? '%' : '+');
+                        }
+                    };
+                    updateCount();
+                });
+                started = true;
+            }
+        });
+
+        // MENÚ MÓVIL
+        const mobileBtn = document.getElementById('mobile-menu-btn'), closeBtn = document.getElementById('close-menu-btn'), mobileMenu = document.getElementById('mobile-menu');
+        function toggleMenu() { mobileMenu.classList.toggle('translate-x-full'); document.body.classList.toggle('overflow-hidden'); }
+        mobileBtn.addEventListener('click', toggleMenu); closeBtn.addEventListener('click', toggleMenu);
+
+        // REVEAL
+        function reveal() { var reveals = document.querySelectorAll(".reveal"); for (var i = 0; i < reveals.length; i++) { var windowHeight = window.innerHeight; var elementTop = reveals[i].getBoundingClientRect().top; if (elementTop < windowHeight - 150) { reveals[i].classList.add("active"); } } }
+        window.addEventListener("scroll", reveal); reveal();
     </script>
 </body>
 </html>

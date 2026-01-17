@@ -4,46 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRUPO SV | Contacto</title>
-    <meta name="description" content="Grupo SV - Empresa líder en Ingeniería, Construcción y Topografía en Yurimaguas. Ejecución de obras, expedientes técnicos y alquiler de equipos topográficos.">
-<meta name="keywords" content="Grupo SV, Constructora Yurimaguas, Ingenieros Yurimaguas, Topografía Loreto, Obras Civiles, Expedientes Técnicos, Victor Sangay">
-<meta name="author" content="Grupo SV">
-<meta name="robots" content="index, follow">
-
-<meta property="og:title" content="GRUPO SV | Ingeniería y Construcción">
-<meta property="og:description" content="Soluciones integrales en obras civiles, topografía y gerencia de proyectos en Yurimaguas.">
-<meta property="og:image" content="https://tudominio.com/logo-circulo.jpg"> <meta property="og:type" content="website">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="logo-circulo.jpg" type="image/jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "GeneralContractor",
+        "name": "Grupo SV",
+        "telephone": "+51943142077",
+        "email": "gruposv39@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Victor Sifuentes N° 605",
+          "addressLocality": "Yurimaguas",
+          "addressRegion": "Loreto",
+          "addressCountry": "PE"
+        }
+      }
+    }
+    </script>
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['Manrope', 'sans-serif'], display: ['Montserrat', 'sans-serif'] },
-                    colors: {
-                        brand: { red: '#E71D25', redDark: '#c41219', dark: '#1a1a1a', gray: '#666666', light: '#F8F9FA' }
-                    },
-                    boxShadow: {
-                        'premium': '0 10px 40px -10px rgba(0,0,0,0.08)',
-                        'premium-hover': '0 20px 60px -15px rgba(231, 29, 37, 0.15)',
-                    }
+                    colors: { brand: { red: '#E71D25', redDark: '#c41219', dark: '#2b2b2b', black: '#1a1a1a', light: '#F4F4F4' } },
+                    boxShadow: { 'premium': '0 20px 50px -12px rgba(0,0,0,0.15)', 'card': '0 10px 30px -5px rgba(0,0,0,0.05)' }
                 }
             }
         }
     </script>
-
     <style>
-        .glass-nav { background: rgba(26, 26, 26, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .nav-transparent { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .glass-nav { background: rgba(43, 43, 43, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-red selection:text-white">
+<body class="bg-gray-50 text-brand-dark antialiased selection:bg-brand-red selection:text-white">
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12 text-white">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12 text-white nav-transparent">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 group">
                 <div class="relative w-11 h-11 rounded-full border-2 border-white/10 overflow-hidden shadow-lg group-hover:border-brand-red transition-colors">
@@ -55,144 +62,168 @@
             </a>
             <div class="hidden md:flex items-center gap-10 font-sans font-semibold text-sm tracking-wide">
                 <a href="index.html" class="opacity-80 hover:opacity-100 hover:text-brand-red transition-all">Inicio</a>
+                <a href="proyectos.html" class="opacity-80 hover:opacity-100 hover:text-brand-red transition-all">Proyectos</a>
                 <a href="servicios.html" class="opacity-80 hover:opacity-100 hover:text-brand-red transition-all">Servicios</a>
                 <a href="contacto.html" class="text-brand-red font-bold">Contacto</a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white hover:text-brand-red transition"><i class="fa-solid fa-bars"></i></button>
+            <button id="mobile-menu-btn" class="md:hidden w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-brand-red hover:border-brand-red transition-all duration-300 shadow-sm text-white">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
+            </button>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-[#1a1a1a] z-50 transform translate-x-full transition-transform duration-500 flex flex-col items-center justify-center gap-8 text-white md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 bg-[#1a1a1a]/98 backdrop-blur-xl z-50 transform translate-x-full transition-transform duration-500 flex flex-col items-center justify-center gap-0 text-white md:hidden">
         <button id="close-menu-btn" class="absolute top-8 right-8 text-4xl text-gray-500 hover:text-white transition-colors">×</button>
-        <a href="index.html" class="text-4xl font-display font-bold hover:text-brand-red mobile-link transition-colors">Inicio</a>
-        <a href="servicios.html" class="text-4xl font-display font-bold hover:text-brand-red mobile-link transition-colors">Servicios</a>
-        <a href="contacto.html" class="text-4xl font-display font-bold text-brand-red mobile-link">Contacto</a>
+        <div class="w-full max-w-sm px-8 flex flex-col text-center">
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-8">Navegación</span>
+            <a href="index.html" class="py-5 text-2xl font-bold border-b border-gray-800 hover:text-brand-red transition-colors">Inicio</a>
+            <a href="proyectos.html" class="py-5 text-2xl font-medium text-gray-400 border-b border-gray-800 hover:text-brand-red transition-colors">Proyectos</a>
+            <a href="servicios.html" class="py-5 text-2xl font-medium text-gray-400 border-b border-gray-800 hover:text-brand-red transition-colors">Servicios</a>
+            <a href="contacto.html" class="py-5 text-2xl font-medium text-brand-red transition-colors">Contacto</a>
+            
+            <a href="https://wa.me/51943142077" target="_blank" class="mt-10 py-4 bg-brand-red text-white font-bold rounded-xl shadow-lg hover:bg-red-700 transition-all uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Cotizar Ahora
+            </a>
+        </div>
     </div>
 
-    <header class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+    <header class="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070" class="w-full h-full object-cover brightness-[0.3]" alt="Contacto">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-brand-light"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-transparent to-gray-50"></div>
         </div>
-        <div class="relative z-10 container mx-auto px-6 text-center pt-20 reveal active">
-            <span class="text-brand-red font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Estamos para servirte</span>
-            <h1 class="text-5xl md:text-7xl font-display font-black text-white uppercase tracking-tight mb-6">Contáctanos</h1>
-            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light">Inicia tu proyecto con el respaldo de expertos en ingeniería.</p>
+        <div class="relative z-10 container mx-auto px-6 text-center -mt-20 reveal active">
+            <span class="text-brand-red font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Hablemos de Negocios</span>
+            <h1 class="text-5xl md:text-8xl font-display font-black text-white uppercase tracking-tight mb-6 drop-shadow-lg">Contáctanos</h1>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">Tu próximo proyecto de ingeniería comienza con una conversación.</p>
         </div>
     </header>
 
-    <section class="py-24 px-6 -mt-20 relative z-20">
+    <section class="px-6 -mt-32 relative z-20 pb-24">
         <div class="container mx-auto max-w-7xl">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                 
-                <div class="space-y-8 reveal">
-                    
-                    <div class="bg-white p-8 md:p-10 rounded-3xl shadow-premium hover:shadow-premium-hover transition-all duration-300 border border-gray-100 flex items-start gap-6 group">
-                        <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-2xl shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                <div class="space-y-6 reveal">
+                    <div class="bg-white p-8 rounded-3xl shadow-card hover:shadow-premium hover:-translate-y-1 transition-all duration-300 flex items-start gap-6 group border border-gray-100">
+                        <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-2xl shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors duration-300">
                             <i class="fa-solid fa-user-tie"></i>
                         </div>
                         <div>
-                            <h4 class="font-display font-bold text-xl text-gray-900 mb-1">Gerencia General</h4>
+                            <h4 class="font-display font-bold text-xl text-brand-dark mb-1">Gerencia General</h4>
                             <p class="text-gray-600 font-medium">Ing. Victor Samuel Sangay Vargas</p>
                             <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-500 text-xs font-bold rounded-full tracking-wide">RUC: 20610164430</span>
                         </div>
                     </div>
 
-                    <div class="bg-white p-8 md:p-10 rounded-3xl shadow-premium hover:shadow-premium-hover transition-all duration-300 border border-gray-100 group">
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-2xl shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-display font-bold text-xl text-gray-900 mb-1">Ubicación</h4>
-                                <p class="text-gray-600">Calle Victor Sifuentes N° 605</p>
-                                <p class="text-gray-500 text-sm">Yurimaguas, Loreto, Perú</p>
-                            </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-card hover:shadow-premium hover:-translate-y-1 transition-all duration-300 flex items-start gap-6 group border border-gray-100">
+                        <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-2xl shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
-                        <a href="https://www.google.com/maps/search/Calle+Victor+Sifuentes+605,+Yurimaguas" target="_blank" class="block w-full text-center py-3 bg-[#1a1a1a] text-white font-bold rounded-xl hover:bg-black transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                            <i class="fa-solid fa-map-location-dot mr-2"></i> Ver en Google Maps
-                        </a>
+                        <div>
+                            <h4 class="font-display font-bold text-xl text-brand-dark mb-1">Oficina Central</h4>
+                            <p class="text-gray-600">Calle Victor Sifuentes N° 605</p>
+                            <p class="text-gray-500 text-sm">Yurimaguas, Loreto, Perú</p>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-8 md:p-10 rounded-3xl shadow-premium hover:shadow-premium-hover transition-all duration-300 border border-gray-100 group">
+                    <div class="bg-white p-8 rounded-3xl shadow-card hover:shadow-premium hover:-translate-y-1 transition-all duration-300 border border-gray-100 group">
                         <div class="flex items-start gap-6 mb-6">
-                            <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-2xl shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                            <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-2xl shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors duration-300">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <h4 class="font-display font-bold text-xl text-gray-900 mb-1">Atención Directa</h4>
+                                <h4 class="font-display font-bold text-xl text-brand-dark mb-1">Atención Directa</h4>
                                 <p class="text-gray-600 font-medium text-lg">+51 943 142 077</p>
                                 <p class="text-gray-500 text-sm">gruposv39@gmail.com</p>
                             </div>
                         </div>
-                        <a href="https://wa.me/51943142077" target="_blank" class="block w-full text-center py-3 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#20bd5a] transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transform hover:-translate-y-0.5">
-                            <i class="fa-brands fa-whatsapp mr-2 text-xl align-middle"></i> Chat WhatsApp
-                        </a>
+                        <a href="https://wa.me/51943142077" target="_blank" class="block w-full text-center py-4 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#20bd5a] transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transform hover:-translate-y-0.5"><i class="fa-brands fa-whatsapp mr-2 text-xl align-middle"></i> Iniciar Chat WhatsApp</a>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-premium border border-gray-100 reveal delay-100 h-fit">
-                    <h3 class="text-3xl font-display font-black text-gray-900 mb-2">Envíanos un mensaje</h3>
-                    <p class="text-gray-500 mb-8">Completa el formulario y te responderemos a la brevedad.</p>
-                    
-                    <form action="https://formspree.io/f/xanrblpd" method="POST" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Nombre</label>
-                                <input type="text" name="nombre" class="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all font-medium text-gray-700" placeholder="Tu nombre" required>
+                <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-premium border border-gray-100 reveal delay-100 h-fit relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-[100px] -z-0 opacity-50"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-4xl font-display font-black text-brand-dark mb-2">Escríbenos</h3>
+                        <p class="text-gray-500 mb-8">Completa el formulario y te responderemos a la brevedad.</p>
+                        
+                        <form action="https://formspree.io/f/xanrblpd" method="POST" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Nombre</label>
+                                    <input type="text" name="nombre" class="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all font-medium text-gray-700" placeholder="Tu nombre" required>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Teléfono</label>
+                                    <input type="tel" name="telefono" class="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all font-medium text-gray-700" placeholder="999 000 000">
+                                </div>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Teléfono</label>
-                                <input type="tel" name="telefono" class="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all font-medium text-gray-700" placeholder="999 000 000">
+                                <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Correo Electrónico</label>
+                                <input type="email" name="email" class="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all font-medium text-gray-700" placeholder="nombre@correo.com" required>
                             </div>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Correo Electrónico</label>
-                            <input type="email" name="email" class="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all font-medium text-gray-700" placeholder="nombre@correo.com" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Mensaje</label>
-                            <textarea name="mensaje" rows="4" class="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all font-medium text-gray-700 resize-none" placeholder="¿En qué podemos ayudarte?" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-4 bg-brand-red text-white font-bold rounded-xl hover:bg-brand-redDark transition-all uppercase tracking-widest text-sm shadow-lg shadow-red-500/30 transform hover:-translate-y-1">
-                            Enviar Mensaje
-                        </button>
-                    </form>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Mensaje</label>
+                                <textarea name="mensaje" rows="4" class="w-full bg-gray-50 border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition-all font-medium text-gray-700 resize-none" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-5 bg-brand-red text-white font-bold rounded-xl hover:bg-brand-redDark transition-all uppercase tracking-widest text-sm shadow-xl shadow-red-500/30 transform hover:-translate-y-1 hover:scale-[1.02]">Enviar Mensaje</button>
+                        </form>
+                    </div>
                 </div>
-
             </div>
+
+            <div class="reveal delay-200 mt-20">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-display font-black text-brand-dark">Encuéntranos en el Mapa</h2>
+                    <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="w-full h-[500px] bg-white p-3 rounded-[2.5rem] shadow-premium">
+                    <div class="w-full h-full rounded-[2rem] overflow-hidden relative">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d209.9041591483401!2d-76.11039530966721!3d-5.907121001430518!2m3!1f143.54307305988192!2f0!3f0!3m2!1i1024!2i768!4f35!5e1!3m2!1ses!2spe!4v1768628412794!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="pointer-events-none absolute inset-0 border-4 border-white/50 rounded-[2rem] shadow-inner"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <footer class="bg-[#1a1a1a] text-white py-12 border-t border-gray-800/50 text-center">
+    <footer class="bg-brand-dark text-white py-12 border-t border-gray-800 text-center relative z-10">
         <div class="container mx-auto px-6">
-            <h2 class="font-display font-black text-2xl tracking-widest mb-3">GRUPO SV</h2>
-            <p class="text-gray-500 text-xs tracking-wide">© 2024 Grupo SV. Todos los derechos reservados.</p>
+            <h2 class="font-display font-black text-2xl tracking-wider mb-2">GRUPO SV</h2>
+            <p class="text-gray-500 text-xs">© 2024 Grupo SV. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <a href="perfil.html" class="fixed bottom-28 right-8 z-50 bg-white text-brand-dark w-16 h-16 rounded-full flex items-center justify-center shadow-premium border-4 border-gray-100 hover:border-brand-red hover:text-brand-red hover:-translate-y-2 hover:scale-110 transition-all duration-300 group" title="Ver Perfil del Ingeniero">
+        <i class="fa-solid fa-user-tie text-2xl"></i>
+    </a>
+
+    <a href="https://wa.me/51943142077?text=Hola%20Grupo%20SV" target="_blank" class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:-translate-y-2 hover:scale-110 transition-all duration-300 group border-4 border-white">
+        <i class="fa-brands fa-whatsapp text-4xl"></i>
+    </a>
+
     <script>
-        // Navbar
+        // NAVBAR CAMALEÓNICO
         const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) { navbar.classList.add('glass-nav', 'py-4'); navbar.classList.remove('py-6'); }
-            else { navbar.classList.remove('glass-nav', 'py-4'); navbar.classList.add('py-6'); }
+        window.addEventListener('scroll', () => { 
+            if (window.scrollY > 50) { 
+                navbar.classList.add('glass-nav', 'py-4'); 
+                navbar.classList.remove('py-6', 'nav-transparent'); 
+            } else { 
+                navbar.classList.remove('glass-nav', 'py-4'); 
+                navbar.classList.add('py-6', 'nav-transparent'); 
+            } 
         });
-        
-        // Menu
+
+        // MENÚ MÓVIL
         const mobileBtn = document.getElementById('mobile-menu-btn'), mobileMenu = document.getElementById('mobile-menu'), closeBtn = document.getElementById('close-menu-btn');
         function toggleMenu() { mobileMenu.classList.toggle('translate-x-full'); document.body.classList.toggle('overflow-hidden'); }
         mobileBtn.addEventListener('click', toggleMenu); closeBtn.addEventListener('click', toggleMenu);
 
-        // Scroll Reveal
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
-            }
-        }
+        // REVEAL ON SCROLL
+        function reveal() { var reveals = document.querySelectorAll(".reveal"); for (var i = 0; i < reveals.length; i++) { var windowHeight = window.innerHeight; var elementTop = reveals[i].getBoundingClientRect().top; if (elementTop < windowHeight - 150) { reveals[i].classList.add("active"); } } }
         window.addEventListener("scroll", reveal); reveal();
     </script>
 </body>
