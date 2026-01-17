@@ -2,7 +2,7 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GRUPO SV | Ingeniería y Construcción</title>
     <meta name="description" content="Grupo SV - Empresa líder en Ingeniería, Construcción y Topografía en Yurimaguas.">
     
@@ -36,13 +36,7 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
+          "dayOfWeek": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ],
           "opens": "08:00",
           "closes": "18:00"
         }
@@ -66,6 +60,9 @@
         }
     </script>
     <style>
+        /* Desactiva gestos táctiles por defecto para que se sienta como App */
+        html, body { touch-action: manipulation; }
+
         .nav-transparent { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
@@ -245,19 +242,19 @@
                 <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-300 reveal group">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110"><i class="fa-solid fa-helmet-safety"></i></div>
                     <h3 class="text-brand-dark font-display font-bold text-2xl mb-4">Ejecución de Obras</h3>
-                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Construcción civil, remodelaciones y mantenimiento con los más altos estándares de seguridad y calidad ISO.</p>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Construcción civil, remodelaciones y mantenimiento con los más altos estándares.</p>
                     <a href="servicios.html" class="inline-flex items-center text-brand-red text-xs font-bold uppercase tracking-widest hover:underline">Saber más <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i></a>
                 </div>
                 <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-300 reveal delay-100 group">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110"><i class="fa-solid fa-file-signature"></i></div>
                     <h3 class="text-brand-dark font-display font-bold text-2xl mb-4">Expedientes Técnicos</h3>
-                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Elaboración y consultoría experta para licitaciones públicas y proyectos privados. Documentación impecable.</p>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Elaboración y consultoría experta para licitaciones públicas y proyectos privados.</p>
                     <a href="servicios.html" class="inline-flex items-center text-brand-red text-xs font-bold uppercase tracking-widest hover:underline">Saber más <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i></a>
                 </div>
                 <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-300 reveal delay-200 group">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110"><i class="fa-solid fa-users-gear"></i></div>
                     <h3 class="text-brand-dark font-display font-bold text-2xl mb-4">Gerencia de Proyectos</h3>
-                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Supervisión, topografía avanzada y gestión integral para garantizar el éxito y rentabilidad de tu inversión.</p>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">Supervisión, topografía avanzada y gestión integral para garantizar el éxito.</p>
                     <a href="servicios.html" class="inline-flex items-center text-brand-red text-xs font-bold uppercase tracking-widest hover:underline">Saber más <i class="fa-solid fa-chevron-right ml-2 text-[10px]"></i></a>
                 </div>
             </div>
@@ -285,7 +282,7 @@
     </a>
 
     <script>
-        // PRELOADER
+        // === 1. PRELOADER INTELIGENTE (MEMORIA DE SESIÓN) ===
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
             if (sessionStorage.getItem('visited')) {
@@ -298,7 +295,7 @@
             }
         });
 
-        // NAVBAR CAMALEÓNICO
+        // === 2. NAVBAR CAMALEÓNICO (BLANCO -> NEGRO) ===
         const navbar = document.getElementById('navbar');
         const navBtn = document.getElementById('nav-btn');
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -321,7 +318,7 @@
             }
         });
 
-        // ANIMACIÓN NÚMEROS
+        // === 3. ANIMACIÓN DE NÚMEROS ===
         const statsSection = document.getElementById('stats-section');
         const counters = document.querySelectorAll('.counter');
         let started = false;
@@ -345,12 +342,12 @@
             }
         });
 
-        // MENÚ MÓVIL
+        // === 4. MENÚ MÓVIL ===
         const mobileBtn = document.getElementById('mobile-menu-btn'), closeBtn = document.getElementById('close-menu-btn'), mobileMenu = document.getElementById('mobile-menu');
         function toggleMenu() { mobileMenu.classList.toggle('translate-x-full'); document.body.classList.toggle('overflow-hidden'); }
         mobileBtn.addEventListener('click', toggleMenu); closeBtn.addEventListener('click', toggleMenu);
 
-        // REVEAL
+        // === 5. REVEAL ===
         function reveal() { var reveals = document.querySelectorAll(".reveal"); for (var i = 0; i < reveals.length; i++) { var windowHeight = window.innerHeight; var elementTop = reveals[i].getBoundingClientRect().top; if (elementTop < windowHeight - 150) { reveals[i].classList.add("active"); } } }
         window.addEventListener("scroll", reveal); reveal();
     </script>

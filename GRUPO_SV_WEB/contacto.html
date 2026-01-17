@@ -2,7 +2,7 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GRUPO SV | Contacto</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -42,6 +42,9 @@
         }
     </script>
     <style>
+        /* Desactiva gestos táctiles por defecto */
+        html, body { touch-action: manipulation; }
+
         .nav-transparent { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .glass-nav { background: rgba(43, 43, 43, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }

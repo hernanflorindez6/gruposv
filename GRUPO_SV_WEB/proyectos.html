@@ -2,7 +2,7 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GRUPO SV | Portafolio de Proyectos</title>
     <meta name="description" content="Galería de obras ejecutadas por Grupo SV en Yurimaguas y Loreto: Construcción, Topografía y Expedientes.">
     
@@ -37,6 +37,9 @@
         }
     </script>
     <style>
+        /* Bloqueo táctil extra */
+        html, body { touch-action: manipulation; }
+
         .nav-transparent { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
@@ -80,7 +83,6 @@
             <a href="proyectos.html" class="py-5 text-2xl font-medium text-brand-red border-b border-gray-100 transition-colors">Proyectos</a>
             <a href="servicios.html" class="py-5 text-2xl font-medium text-gray-600 border-b border-gray-100 hover:text-brand-red transition-colors">Servicios</a>
             <a href="contacto.html" class="py-5 text-2xl font-medium text-gray-600 hover:text-brand-red transition-colors">Contacto</a>
-            
             <a href="https://wa.me/51943142077" target="_blank" class="mt-10 py-4 bg-brand-red text-white font-bold rounded-xl shadow-lg hover:bg-red-700 transition-all uppercase tracking-widest text-xs flex items-center justify-center gap-2">
                 <i class="fa-brands fa-whatsapp text-lg"></i> Cotizar Ahora
             </a>
@@ -180,7 +182,6 @@
     </a>
 
     <script>
-        // NAVBAR CAMALEÓNICO
         const navbar = document.getElementById('navbar');
         const navBtn = document.getElementById('nav-btn');
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -203,12 +204,10 @@
             }
         });
 
-        // MENÚ MÓVIL
         const mobileBtn = document.getElementById('mobile-menu-btn'), closeBtn = document.getElementById('close-menu-btn'), mobileMenu = document.getElementById('mobile-menu');
         function toggleMenu() { mobileMenu.classList.toggle('translate-x-full'); document.body.classList.toggle('overflow-hidden'); }
         mobileBtn.addEventListener('click', toggleMenu); closeBtn.addEventListener('click', toggleMenu);
 
-        // REVEAL
         function reveal() { var reveals = document.querySelectorAll(".reveal"); for (var i = 0; i < reveals.length; i++) { var windowHeight = window.innerHeight; var elementTop = reveals[i].getBoundingClientRect().top; if (elementTop < windowHeight - 100) reveals[i].classList.add("active"); } }
         window.addEventListener("scroll", reveal); reveal();
     </script>
